@@ -26,7 +26,7 @@ class ParentWindow(Frame):
         htmlContent = "<html>\n<body>\n<h1>" + htmlText +  "</h1>\n</body>\n</html>"
         htmlFile.write(htmlContent)
         htmlFile.close()
-        webbrowser.open_new_tab("/Users/wayne/Documents/Python/index.html")
+        webbrowser.open_new_tab("index.html")
 
     def entryHTML(self):
         entryText = self.text_entry.get()
@@ -34,7 +34,7 @@ class ParentWindow(Frame):
         htmlContent = "<html>\n<body>\n<h1>" + entryText +  "</h1>\n</body>\n</html>"
         htmlFile.write(htmlContent)
         htmlFile.close()
-        webbrowser.open_new_tab("/Users/wayne/Documents/Python/index.html")
+        webbrowser.open_new_tab("index.html")
 
     
 
