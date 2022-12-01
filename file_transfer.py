@@ -80,10 +80,11 @@ class ParentWindow(Frame):
         # Gets a list of files in the source directory
         source_files = os.listdir(source)
         # Runs through each file in the source directory
-        for source + '/' + i in source_files:
-            mod_time = os.path.getmtime(i)
+        for i in source_files:
+            mod_time = os.path.getmtime((source + '/' + i))
             current_time = time.time()
-            if ((current_time - mod_time) / 3600) < 24:
+            if ((current_time - mod_time) / 3600) < 48:
+                print((current_time - mod_time))
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transferred.')
 
