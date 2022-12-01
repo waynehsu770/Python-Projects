@@ -67,7 +67,7 @@ class ParentWindow(Frame):
 
         # The .delete(0, END) will clear the content that is inserted in the Entry widget
         # This allows the path to be inserted into the Entry widget properly
-        self.source_dir.delete(0, END)
+        self.destination_dir.delete(0, END)
         # The .insert method will insert the user selection to the source_dir Entry
         self.destination_dir.insert(0, selectDestDir)
 
