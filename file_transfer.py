@@ -83,8 +83,7 @@ class ParentWindow(Frame):
         for i in source_files:
             mod_time = os.path.getmtime((source + '/' + i))
             current_time = time.time()
-            if ((current_time - mod_time) / 3600) < 48:
-                print((current_time - mod_time))
+            if ((current_time - mod_time) / 3600) < 24:
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transferred.')
 
